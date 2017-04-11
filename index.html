@@ -1,21 +1,21 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
 root: .               # DON'T CHANGE THIS EITHER.  (THANK YOU.)
-carpentry: "FIXME"    # what kind of Carpentry (must be either "dc" or "swc")
-venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
-latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
-humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-contact: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+carpentry: "dc"    # what kind of Carpentry (must be either "dc" or "swc")
+venue: "University of Connecticut, Storrs"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "Laurel Hall 306, Storrs, CT 06269"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
+language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
+latlng: "41.807232, -72.253436"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use http://www.latlong.net/)
+humandate: "Apr 17, 2017"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "10:00 am - 12:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2017-04-17      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2017-04-17        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Pariksheet Nanda"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["Jingwen Pei", "Xin Li", "Tingyang Xu", "Christian Kuntz", "Luke Malinowski", "Dave Christianson", "Ed Swindelles"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+contact: ["hpc@uconn.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+eventbrite: 33643014161          # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 <!-- See instructions in the comments below for how to edit specific sections of this workshop template. -->
@@ -47,10 +47,12 @@ eventbrite:           # optional: alphanumeric key for Eventbrite registration, 
 </iframe>
 {% endif %}
 
+<!--
 <h4>This is the workshop template.  Use it to create your own website.
 Delete these lines and please fill in 
 <a href="{{site.amy_site}}/submit">this self-organized workshop form</a>
 and the administrator will contact you if we need any extra information.</h4>
+-->
 
 <h2 id="general">General Information</h2>
 
@@ -61,15 +63,12 @@ and the administrator will contact you if we need any extra information.</h4>
   the pitch.
 -->
 <p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>
-  aims to help researchers get their work done
-  in less time and with less pain
-  by teaching them basic research computing skills.
-  This hands-on workshop will cover basic concepts and tools,
-  including program design, version control, data management,
-  and task automation.
-  Participants will be encouraged to help one another
-  and to apply what they have learned to their own research problems.
+  The HPC Essentials workshop is for any researcher
+  to use UConn's computer cluster
+  with no prior experience of the command-line or programming.
+  We will cover what the cluster can do for you,
+  how to navigate the command-line interface to run your programs
+  and transfer data.
 </p>
 <p align="center">
   <em>
@@ -132,7 +131,7 @@ and the administrator will contact you if we need any extra information.</h4>
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
   Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
+  on. They should have a few specific software packages installed and an account on the HPC cluster (listed
   <a href="#setup">below</a>). They are also required to abide by
   Software Carpentry's
   <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
@@ -206,25 +205,12 @@ and the administrator will contact you if we need any extra information.</h4>
 
 <div class="row">
   <div class="col-md-6">
-    <h3>Day 1</h3>
     <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Automating tasks with the Unix shell</td> </tr>
-      <tr> <td>10:30</td> <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Building programs with Python</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
-    </table>
-  </div>
-  <div class="col-md-6">
-    <h3>Day 2</h3>
-    <table class="table table-striped">
-      <tr> <td>09:00</td>  <td>Version control with Git</td> </tr>
-      <tr> <td>10:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>12:00</td>  <td>Lunch break</td> </tr>
-      <tr> <td>13:00</td>  <td>Managing data with SQL</td> </tr>
-      <tr> <td>14:30</td>  <td>Coffee</td> </tr>
-      <tr> <td>16:00</td>  <td>Wrap-up</td> </tr>
+      <tr> <td>10:00</td> <td>What is a modern supercomputer?</td> </tr>
+      <tr> <td>10:10</td> <td>Using the UNIX shell</td> </tr>
+      <tr> <td>11:00</td> <td>Loading modules and submitting jobs to the cluster</td> </tr>
+      <tr> <td>11:45</td> <td>Saving results with Globus</td> </tr>
+      <tr> <td>12:00</td> <td>Wrap-up</td> </tr>
     </table>
   </div>
 </div>
@@ -272,13 +258,11 @@ and the administrator will contact you if we need any extra information.</h4>
     <ul>
       <li>Files and directories</li>
       <li>History and tab completion</li>
-      <li>Pipes and redirection</li>
-      <li>Looping over files</li>
       <li>Creating and running shell scripts</li>
-      <li>Finding things</li>
       <li><a href="{{site.swc_pages}}/shell-novice/reference/">Reference...</a></li>
     </ul>
   </div>
+  <!--
   <div class="col-md-6">
     <h3 id="syllabus-python">Programming in Python</h3>
     <ul>
@@ -292,6 +276,7 @@ and the administrator will contact you if we need any extra information.</h4>
       <li><a href="{{site.swc_pages}}/python-novice-inflammation/reference/">Reference...</a></li>
     </ul>
   </div>
+  -->
   <!--
   <div class="col-md-6">
     <h3 id="syllabus-r">Programming in R</h3>
@@ -319,7 +304,7 @@ and the administrator will contact you if we need any extra information.</h4>
    </div>
    -->
 </div>
-
+<!--
 <div class="row">
   <div class="col-md-6">
     <h3 id="syllabus-git">Version Control with Git</h3>
@@ -350,7 +335,7 @@ and the administrator will contact you if we need any extra information.</h4>
     </ul>
   </div>
 </div>
-
+-->
 <hr/>
 
 <!--
@@ -368,7 +353,7 @@ and the administrator will contact you if we need any extra information.</h4>
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a Software Carpentry workshop, you will need
+  To participate in the workshop, you will need
   access to the software described below. In addition, you will
   need an up-to-date web browser.
 </p>
@@ -389,59 +374,13 @@ and the administrator will contact you if we need any extra information.</h4>
   <div class="row">
     <div class="col-md-4">
       <h4 id="shell-windows">Windows</h4>
-      <a href="https://www.youtube.com/watch?v=339AEqk9c-8">Video Tutorial</a>
+      <p>You will need a terminal program to access the HPC cluster.</p>
       <ol>
-        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>
-        <li>Run the installer and follow the steps bellow:
-          <ol>
-            <!-- Git 2.8.2 Setup -->
-            <!-- Information -->
-            <li>Click on "Next".</li>
-            <!-- Select Components -->
-            <li>Click on "Next".</li>
-            <!-- Adjusting your PATH environment -->
-            <li>
-              <strong>
-                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".
-              </strong>
-                If you forgot to do this programs that you need for the workshop will not work properly.
-                If this happens rerun the installer and select the appropriate option.
-            </li>
-            <!-- Choosing the SSH executable -->
-            <li>Click on "Next".</li>
-            <!-- Configuring the line ending conversions -->
-            <li>
-              <strong>
-                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring the terminal emulator to use with Git Bash -->
-            <li>
-              <strong>
-                Keep "Use Windows' default console window" selected and click on "Next".
-              </strong>
-            </li>
-            <!-- Configuring experimental performance tweaks -->
-            <li>Click on "Install".</li>
-            <!-- Installing -->
-            <!-- Completing the Git Setup Wizard -->
-            <li>Click on "Finish".</li>
-          </ol>
-        </li>
-        <li>
-          If your "HOME" environment variable is not set (or you don't know what this is):
-          <ol>
-            <li>Open command prompt (Open Start Menu then type <code>cmd</code> and press [Enter])</li>
-            <li>
-              Type the following line into the command prompt window exactly as shown:
-              <p><code>setx HOME "%USERPROFILE%"</code></p>
-            </li>
-            <li>Press [Enter], you should see <code>SUCCESS: Specified value was saved.</code></li>
-            <li>Quit command prompt by typing <code>exit</code> then pressing [Enter]</li>
-          </ol>
-        </li>
+	<li>Go to the Putty <a href="http://www.chiark.greenend.org.uk/%7Esgtatham/putty/download.html">download
+	    page</a></li>
+	<li>Click on <i>putty.exe</i> link under <strong>Alternative binary files</strong> to download putty</li>
+	<li>To use it, double-click on the downloaded file</li>
       </ol>
-      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
     </div>
     <div class="col-md-4">
       <h4 id="shell-macosx">Mac OS X</h4>
@@ -450,8 +389,6 @@ and the administrator will contact you if we need any extra information.</h4>
         need to install anything.  You access Bash from the Terminal
         (found in
         <code>/Applications/Utilities</code>).
-        See the Git installation <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">video tutorial</a>
-        for an example on how to open the Terminal.
         You may want to keep
         Terminal in your dock for this workshop.
       </p>
@@ -468,8 +405,19 @@ and the administrator will contact you if we need any extra information.</h4>
   </div>
 </div> <!-- End of 'shell' section. -->
 
-<div id="git"> <!-- Start of 'Git' section. GitHub browser compatability
-           is given at https://help.github.com/articles/supported-browsers/-->
+<div id="cluster">
+  <h3>HPC cluster account</h3>
+  <p>
+    You will need to be able to access the HPC cluster via <code>login.storrs.hpc.uconn.edu</code>
+    as described on our <a href="https://wiki.hpc.uconn.edu/index.php/HPC_Getting_Started">HPC wiki</a>.
+    Otherwise, you will need an account on our HPC cluster.
+    You can request an account from
+    <a href="http://hpc.uconn.edu/storrs/account-application">hpc.uconn.edu</a>.
+  </p>
+</div>
+
+<!--
+<div id="git">
   <h3>Git</h3>
   <p>
     Git is a version control system that lets you track who made changes
@@ -522,9 +470,9 @@ and the administrator will contact you if we need any extra information.</h4>
       </p>
     </div>
   </div>
-</div> <!-- End of 'Git' section. -->
+</div>
 
-<div id="editor"> <!-- Start of 'editor' section. -->
+<div id="editor">
   <h3>Text Editor</h3>
 
   <p>
@@ -585,12 +533,9 @@ and the administrator will contact you if we need any extra information.</h4>
       </p>
     </div>
   </div>
-</div> <!-- End of 'editor' section. -->
+</div>
 
-<div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
-           the workshop will teach Python using something other than
-           the IPython notebook.
-           Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility -->
+<div id="python">
   <h3>Python</h3>
 
   <p>
@@ -670,16 +615,16 @@ and the administrator will contact you if we need any extra information.</h4>
       </ol>
     </div>
   </div>
-<!--
+
   <p>
   Once you are done installing the software listed above,
   please go to <a href="setup/index.html">this page</a>,
   which has instructions on how to test that everything was installed correctly.
   </p>
--->
-</div> <!-- End of 'Python' section. -->
 
-<div id="r"> <!-- Start of 'R' section. -->
+</div>
+
+<div id="r">
   <h3>R</h3>
 
   <p>
@@ -728,9 +673,9 @@ and the administrator will contact you if we need any extra information.</h4>
       </p>
     </div>
   </div>
-</div> <!-- End of 'R' section. -->
+</div>
 
-<div id="sql"> <!-- Start of 'SQLite' section. -->
+<div id="sql">
   <h3>SQLite</h3>
 
   <p>
