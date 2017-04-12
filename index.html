@@ -42,8 +42,13 @@ eventbrite: 33643014161          # optional: alphanumeric key for Eventbrite reg
   src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
   frameborder="0"
   width="100%"
-  height="248px"
-  scrolling="auto">
+  height="285px"
+  scrolling="auto"
+  vspace="0"
+  hspace="0"
+  marginheight="5"
+  marginwidth="5"
+  allowtransparency="true">
 </iframe>
 {% endif %}
 
@@ -357,11 +362,13 @@ and the administrator will contact you if we need any extra information.</h4>
   access to the software described below. In addition, you will
   need an up-to-date web browser.
 </p>
+<!--
 <p>
   We maintain a list of common issues that occur during installation as a reference for instructors
   that may be useful on the
   <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
 </p>
+-->
 
 <div id="shell"> <!-- Start of 'shell' section. -->
   <h3>The Bash Shell</h3>
@@ -408,11 +415,18 @@ and the administrator will contact you if we need any extra information.</h4>
 <div id="cluster">
   <h3>HPC cluster account</h3>
   <p>
-    You will need to be able to access the HPC cluster via <code>login.storrs.hpc.uconn.edu</code>
+    Please verify that you can connect to the HPC cluster via <code>login.storrs.hpc.uconn.edu</code>.
+    If you have not connected to the cluster before,
+    you will need to login with your NetID and
+    request an account on our HPC cluster using this form:
+    <a href="http://hpc.uconn.edu/storrs/account-application">hpc.uconn.edu/storrs/account-application</a>.
     as described on our <a href="https://wiki.hpc.uconn.edu/index.php/HPC_Getting_Started">HPC wiki</a>.
-    Otherwise, you will need an account on our HPC cluster.
-    You can request an account from
-    <a href="http://hpc.uconn.edu/storrs/account-application">hpc.uconn.edu</a>.
+  </p>
+  <p>
+    If you do not have a Net ID,
+    please have a faculty member or other UConn employee
+    setup an affiliate NetID for you: <a href="http://affiliate.uconn.edu">affiliate.uconn.edu</a>.
+    Approval for a NetID takes about 1-2 days.
   </p>
 </div>
 
